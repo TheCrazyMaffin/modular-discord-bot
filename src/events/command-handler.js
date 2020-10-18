@@ -19,7 +19,7 @@ module.exports = {
                         commandModule.function(message, message.content.substring(process.env.DISCORD_BOT_PREFIX.length).substring(command.length + 1));
                     }
                     if (!message.member) return;
-                    if (message.member.hasPermission(commandModule.permission)) {
+                    if (commandModule.permission == "" || message.member.hasPermission(commandModule.permission)) {
                         executeCommand();
                     } else {
                         message.reply("Insufficient permissions");
