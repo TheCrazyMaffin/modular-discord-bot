@@ -15,7 +15,7 @@ module.exports = {
             }
         );
         sentMessage.react("✅");
-        const ReactionCollector = sentMessage.createReactionCollector(messageReactionFilter, { maxUsers: parseInt(playercount), time: 15000 /*600000*/ });
+        const ReactionCollector = sentMessage.createReactionCollector(messageReactionFilter, { maxUsers: parseInt(playercount), time: 600000 });
         ReactionCollector.on("end", (collected, reason) => {
             sentMessage.edit(`${message.replace(/ateveryone/gi, "@everyone")}\n\n_The party is over. You cannot enter anymore._`);
             sentMessage.reactions.removeAll();
