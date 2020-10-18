@@ -1,0 +1,1 @@
+This directory contains an empty main.db, SQLITE3 database to be used by the modules
